@@ -1,0 +1,35 @@
+.nav{
+	width:100%;
+	border-top:1px solid #61c0ec;
+}
+.nav ul{
+	list-style-type:none;
+	padding:0;
+	text-align:center;
+	margin: 0;
+}
+.nav ul li{
+	float:left;
+	height:3.5rem;
+	line-height:3.5rem;
+	background-color:#61c0ec;
+	color:#fff;
+}
+.course-nav-width li{
+	width:33.33333333%;
+}
+.repairs-nav-width li{
+	width:33.33333333%;
+}
+.nav ul li:last-child{
+	border-right:none;
+}
+.nav ul li.select{
+	border-bottom:none;
+	background-color:#fff;
+	color:#61c0ec;
+}
+.none{display:none;}
+.center{text-align:center;}
+.h10{height:10px;}
+.testimg{background: url(../images/down.png);height:800px;}
