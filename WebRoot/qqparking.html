@@ -13,19 +13,22 @@
 			<ul class="tabs course-nav-width clearfix">
 				<a href="" id="cya"><li class="select">常用车辆</li></a>
 				<a href="" id="fka"><li class="select">访客车辆</li></a>
-				<li class="">车辆统计</li>
+				<li class="">车位信息</li>
 			</ul>
 		</nav> 
  		<div class="container-fluid">
 		   <div class="row-fluid">
 		      <div class="col-xs-12"><table class="table table-bordered table-hover" id="signal"></table></div>
+		      
+		      <div class="col-xs-12"><div id="front"></div></div>
+		      <div class="h10"></div>
 		      <div class="col-xs-12">
 		      <a href="/carplat/parking.html" class="btn btn-warning btn-block btn-large">点击查看停车详情</a>
 		      </div>
-		      <div class="h10"></div><div class="h10"></div>
+		      <!-- <div class="h10"></div><div class="h10"></div>
 		      <div class="col-xs-12"><table class="table table-bordered table-hover" id="front1"></table></div>
 		      <div class="col-xs-12"><table class="table table-bordered table-hover" id="front2"></table></div>
-		      <div class="col-xs-12"><table class="table table-bordered table-hover" id="front3"></table></div>
+		      <div class="col-xs-12"><table class="table table-bordered table-hover" id="front3"></table></div> -->
 		   </div>
 		</div> 
 	
@@ -81,8 +84,8 @@
 	    }
 	    function initC()
 		{
-			initCount(1);
-			initCount(2);
+			//initCount(1);
+			//initCount(2);
 			initCount(3);
 		}
 	    function initCount(pos)
@@ -94,7 +97,7 @@
 					var a=eval("("+s+")");
 					if (a)
 					{		
-						var tt = '显示屏';
+						/* var tt = '显示屏';
 						if (pos == 1)
 						{
 							tt = '前校门显示屏';
@@ -106,21 +109,23 @@
 						else if (pos == 3)
 						{
 							tt = '地下显示屏';
-						}
-						var t = '<tr style="background:#ecebea"><th>'+tt+'</th></tr>';
-						for(var i=0;i<a.rows.length;i++){
+						} */
+						var t = '地下车位信息：';
+						for(var i=3;i<a.rows.length;i++){
 								var b = a.rows[i];
 								var c = b.con;
 								if (c)
 								{
-									t += '<tr style="background:#fff"><td>'+b.con+'</td></tr>';
+									t += c;
 								}
 								else
 								{
-									t += '<tr style="background:#fff"><td>&nbsp;</td></tr>';
+									t += '&nbsp;';
 								}
+								t += '&nbsp;';
 							}				
-						$("#front"+pos).html(t);	
+						//$("#front"+pos).html(t);	
+						$("#front").html(t);	
 					}
 				}
 				});
